@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-x-3 px-9 py-4 bg-[#B85C38] hover:bg-[#A04E30] text-white font-semibold text-lg rounded-3xl transition-all active:scale-[0.985] shadow-lg shadow-[#B85C38]/20;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 border border-[#D4C9B8] hover:bg-white text-[#4A5D4A] font-semibold text-lg rounded-3xl transition-all;
+  }
+
+  .section {
+    @apply py-16 md:py-20 px-6;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-[#2D2D2D] tracking-tight;
+  }
+
+  .modern-pill {
+    @apply inline-block bg-[#B85C38]/10 text-[#B85C38] font-semibold text-xs px-3 py-1 rounded-full tracking-wide;
+  }
+}

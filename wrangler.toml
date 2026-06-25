@@ -1,0 +1,7 @@
+name = "waxlashtan-com"
+compatibility_date = "2026-06-25"
+workers_dev = false
+preview_urls = false
+
+[assets]
+directory = "./dist"

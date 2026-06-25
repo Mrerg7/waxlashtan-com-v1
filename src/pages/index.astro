@@ -1,0 +1,337 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
+import StructuredData from '../components/StructuredData.astro';
+
+const title = 'waxlashtan.com — The Definitive Domain for Wax + Lash + Tan | Premium Acquisition';
+const description =
+  'Own waxlashtan.com — the rare, definitive domain with SEO built directly into the name for the high-demand combination of waxing, lash extensions, and tanning services.';
+const ogImage = 'https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/e8c3b744-f598-4963-7ea0-3b8f30c67d00/public';
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <SEO title={title} description={description} ogImage={ogImage} pathname="/" />
+  <StructuredData
+    schema={{
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebSite',
+          name: 'waxlashtan.com',
+          description: description,
+          url: 'https://waxlashtan.com',
+        },
+        {
+          '@type': 'Product',
+          name: 'waxlashtan.com Domain',
+          description: 'Premium domain name for waxing, lash extensions, and tanning services. A rare, service-exclusive .com domain with SEO built directly into the name.',
+          offers: {
+            '@type': 'Offer',
+            availability: 'https://schema.org/InStock',
+            url: 'https://waxlashtan.com',
+            businessFunction: 'https://schema.org/Sell',
+          },
+        },
+      ],
+    }}
+  />
+
+  <!-- Hero Section -->
+  <header class="relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-6 pt-16 pb-20 md:pt-20 md:pb-24 text-center">
+      <!-- Definitive Badge -->
+      <div class="inline-flex items-center gap-x-2 mb-6">
+        <div class="flex items-center gap-x-2 px-5 py-1.5 rounded-2xl text-sm font-bold tracking-[1px] text-white bg-gradient-to-r from-[#8B3D1F] to-[#B85C38]">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span>DEFINITIVE SEARCHED TERM</span>
+        </div>
+      </div>
+
+      <!-- Hero Image from Cloudflare Images CDN -->
+      <div class="mb-10">
+        <img
+          src={ogImage}
+          alt="waxlashtan.com — Premium domain for wax, lash, and tan services"
+          class="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl"
+          width="1200"
+          height="630"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-[#2D2D2D] mb-3">
+        waxlashtan<span class="text-[#B85C38]">.com</span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-2xl md:text-3xl font-semibold tracking-tight text-[#4A5D4A] mb-6">
+        The definitive domain for<br class="hidden md:block" /> waxing, lashes &amp; tanning.
+      </p>
+
+      <p class="max-w-lg mx-auto text-lg text-[#5C5C5C] mb-10">
+        SEO built directly into the name. The exact searched term for the popular multi-service beauty bundle that clients want most.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#acquire" class="btn-primary">
+          <span>Inquire to Acquire</span>
+          <svg class="w-5 h-5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+
+        <a href="#seo" class="btn-secondary">
+          Explore Market Fit
+        </a>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[#6B6B6B]">
+        <div class="flex items-center gap-x-1.5">
+          <svg class="w-4 h-4 text-[#B85C38]" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          <span>Exact service keywords</span>
+        </div>
+        <div class="flex items-center gap-x-1.5">
+          <svg class="w-4 h-4 text-[#B85C38]" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          <span>Premium .com</span>
+        </div>
+        <div class="flex items-center gap-x-1.5">
+          <svg class="w-4 h-4 text-[#B85C38]" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          <span>High acquisition value</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[1px] bg-gradient-to-r from-transparent via-[#D4C9B8] to-transparent"></div>
+  </header>
+
+  <!-- Why This Domain -->
+  <section id="why" class="section max-w-7xl mx-auto border-t border-[#EDE4D7]">
+    <div class="text-center mb-12">
+      <div class="modern-pill mb-3">RARE SERVICE-MATCHED ASSET</div>
+      <h2 class="section-title">Why waxlashtan.com commands a premium position</h2>
+      <p class="mt-4 max-w-md mx-auto text-[#5C5C5C]">The only domain that perfectly matches the exact high-intent searched term for the most popular bundled beauty services.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white border border-[#EDE4D7] rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+        <div class="w-12 h-12 bg-[#F8F1E9] rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-[#B85C38]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-xl tracking-tight mb-3">Definitive Searched Term</h3>
+        <p class="text-[#5C5C5C] leading-relaxed text-sm">&ldquo;Wax lash tan&rdquo; is exactly how clients search when looking for salons that offer the popular combination of body/facial waxing, eyelash extensions, and spray tanning. This domain owns that phrase.</p>
+      </div>
+
+      <div class="bg-white border border-[#EDE4D7] rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+        <div class="w-12 h-12 bg-[#F8F1E9] rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-[#B85C38]" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-xl tracking-tight mb-3">SEO Built Into the Domain</h3>
+        <p class="text-[#5C5C5C] leading-relaxed text-sm">Contains the precise keywords clients use: wax + lash + tan. This gives immediate relevance and advantage for organic search in the multi-service beauty category.</p>
+      </div>
+
+      <div class="bg-white border border-[#EDE4D7] rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+        <div class="w-12 h-12 bg-[#F8F1E9] rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-[#B85C38]" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-xl tracking-tight mb-3">Exclusively Matched to Service</h3>
+        <p class="text-[#5C5C5C] leading-relaxed text-sm">Unlike generic beauty domains, this name is laser-focused on the exact three services. It signals specialization and expertise from the first impression.</p>
+      </div>
+
+      <div class="bg-white border border-[#EDE4D7] rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+        <div class="w-12 h-12 bg-[#F8F1E9] rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-[#B85C38]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-xl tracking-tight mb-3">Premium .com Authority</h3>
+        <p class="text-[#5C5C5C] leading-relaxed text-sm">The gold-standard TLD combined with highly relevant keywords creates maximum trust, type-in potential, and long-term brand equity.</p>
+      </div>
+
+      <div class="bg-white border border-[#EDE4D7] rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+        <div class="w-12 h-12 bg-[#F8F1E9] rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-[#B85C38]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-xl tracking-tight mb-3">High Commercial Intent</h3>
+        <p class="text-[#5C5C5C] leading-relaxed text-sm">Clients searching for wax + lash + tan services are ready to book. This domain captures that high-intent traffic and converts it into brand recognition.</p>
+      </div>
+
+      <div class="bg-white border border-[#EDE4D7] rounded-3xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+        <div class="w-12 h-12 bg-[#F8F1E9] rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-[#B85C38]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-xl tracking-tight mb-3">Rare &amp; High-Value Asset</h3>
+        <p class="text-[#5C5C5C] leading-relaxed text-sm">Domains that perfectly match a specific, popular service combination in .com are exceptionally rare. A strategic, high-acquisition-value digital property.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO & Market Fit -->
+  <section id="seo" class="bg-white border-y border-[#EDE4D7]">
+    <div class="max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <div class="grid md:grid-cols-12 gap-x-12 items-center">
+        <div class="md:col-span-7">
+          <div class="modern-pill mb-4">MARKET &amp; SEARCH ALIGNMENT</div>
+          <h2 class="section-title mb-6">The exact name clients are already searching for</h2>
+          <div class="text-[#4A5D4A] space-y-4 text-lg">
+            <p>Modern beauty clients rarely book just one service. The combination of <strong>waxing + lash extensions + tanning</strong> has become one of the most requested bundles in salons across the country.</p>
+            <p>By owning <strong>waxlashtan.com</strong>, you capture the precise language people use when searching for this popular trio of services. It&rsquo;s not just a domain &mdash; it&rsquo;s the definitive digital identity for businesses built around these exact offerings.</p>
+          </div>
+        </div>
+
+        <div class="md:col-span-5 mt-10 md:mt-0">
+          <div class="bg-[#F8F1E9] rounded-3xl p-8 border border-[#EDE4D7]">
+            <div class="space-y-5">
+              <div>
+                <div class="text-sm font-medium text-[#6B6B6B] mb-2">High-Intent Keyword Match</div>
+                <div class="space-y-1.5 text-sm">
+                  <div>wax + lash + tan</div>
+                  <div>waxing lashes tanning</div>
+                  <div>lash and tan salon</div>
+                  <div>wax lash tan near me</div>
+                </div>
+              </div>
+              <div class="pt-4 border-t border-[#D4C9B8]">
+                <div class="text-xs text-[#6B6B6B]">This domain aligns directly with real client search behavior in the multi-service beauty category, giving it inherent SEO strength and brand clarity.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section id="use-cases" class="section max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <div class="modern-pill mb-3">EXCLUSIVE SERVICE MATCH</div>
+      <h2 class="section-title">Built for the modern multi-service beauty business</h2>
+      <p class="mt-3 max-w-md mx-auto text-[#5C5C5C]">waxlashtan.com is the perfect name for any business centered on the powerful combination of waxing, lashes, and tanning.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="group bg-white border border-[#EDE4D7] hover:border-[#B85C38]/30 rounded-3xl p-8 transition-all">
+        <div class="flex items-center gap-x-4 mb-5">
+          <div class="text-[#B85C38]">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-lg">Full-Service Wax + Lash + Tan Salon</h4>
+        </div>
+        <p class="text-[#5C5C5C] text-sm">The ideal flagship name for a modern salon specializing in these three high-demand services. Instantly communicates exactly what you offer.</p>
+      </div>
+
+      <div class="group bg-white border border-[#EDE4D7] hover:border-[#B85C38]/30 rounded-3xl p-8 transition-all">
+        <div class="flex items-center gap-x-4 mb-5">
+          <div class="text-[#B85C38]">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-lg">Multi-Location Salon Chain</h4>
+        </div>
+        <p class="text-[#5C5C5C] text-sm">A strong, scalable brand name for a growing chain focused on the wax-lash-tan bundle. Clear positioning across all locations.</p>
+      </div>
+
+      <div class="group bg-white border border-[#EDE4D7] hover:border-[#B85C38]/30 rounded-3xl p-8 transition-all">
+        <div class="flex items-center gap-x-4 mb-5">
+          <div class="text-[#B85C38]">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-lg">Mobile / Concierge Service</h4>
+        </div>
+        <p class="text-[#5C5C5C] text-sm">Perfect for a premium mobile service that brings waxing, lash extensions, and tanning directly to clients. The name explains the offering clearly.</p>
+      </div>
+
+      <div class="group bg-white border border-[#EDE4D7] hover:border-[#B85C38]/30 rounded-3xl p-8 transition-all">
+        <div class="flex items-center gap-x-4 mb-5">
+          <div class="text-[#B85C38]">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-lg">Specialized Booking Platform</h4>
+        </div>
+        <p class="text-[#5C5C5C] text-sm">An excellent name for a booking site or app focused on salons and professionals offering wax, lash, and tan services.</p>
+      </div>
+
+      <div class="group bg-white border border-[#EDE4D7] hover:border-[#B85C38]/30 rounded-3xl p-8 transition-all">
+        <div class="flex items-center gap-x-4 mb-5">
+          <div class="text-[#B85C38]">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-lg">Franchise or National Concept</h4>
+        </div>
+        <p class="text-[#5C5C5C] text-sm">A clear, ownable name that can scale nationally as a recognized brand for the wax-lash-tan service model.</p>
+      </div>
+
+      <div class="group bg-white border border-[#EDE4D7] hover:border-[#B85C38]/30 rounded-3xl p-8 transition-all">
+        <div class="flex items-center gap-x-4 mb-5">
+          <div class="text-[#B85C38]">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-lg">Product or Training Brand</h4>
+        </div>
+        <p class="text-[#5C5C5C] text-sm">Strong foundation for a line of professional products, supplies, or training programs focused on these three core beauty services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Acquisition CTA -->
+  <section id="acquire" class="bg-[#2D2D2D] text-white py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <div class="max-w-2xl mx-auto">
+        <div class="inline-block px-4 py-1 bg-white/10 rounded-full text-sm font-medium tracking-wider mb-6">HIGH-VALUE RARE ASSET</div>
+
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter mb-6">Own the definitive name<br />for wax + lash + tan.</h2>
+
+        <p class="text-xl text-white/70 max-w-md mx-auto mb-10">waxlashtan.com is a rare, service-exclusive premium domain with SEO built directly into the name. It represents a high-acquisition-value opportunity for serious buyers seeking the clearest possible positioning in the multi-service beauty market.</p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:sales@desertrich.com?subject=Acquisition%20Inquiry%20-%20waxlashtan.com&body=Hello,%0D%0A%0D%0AI%20am%20interested%20in%20acquiring%20waxlashtan.com.%20Please%20provide%20details%20and%20next%20steps.%0D%0A%0D%0ABest%20regards,"
+            class="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-white text-[#2D2D2D] hover:bg-[#F8F1E9] font-semibold text-lg rounded-3xl transition-all active:scale-[0.985]"
+          >
+            <span>Make an Offer</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </a>
+
+          <button
+            onclick="copyEmail()"
+            class="inline-flex items-center justify-center gap-x-3 px-8 py-4 border border-white/30 hover:bg-white/5 font-medium text-lg rounded-3xl transition-all"
+          >
+            Copy Contact Email
+          </button>
+        </div>
+
+        <p class="mt-8 text-sm text-white/50">Serious inquiries only. This is a high-acquisition-value domain matched exclusively to a specific, high-demand service combination.</p>
+      </div>
+    </div>
+  </section>
+</Layout>
