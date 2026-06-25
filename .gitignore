@@ -21,3 +21,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# original reference HTML (replaced by Astro build)
+waxlashtan-com-premium-landing.html
