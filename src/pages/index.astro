@@ -25,6 +25,12 @@ const ogImage = 'https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/e8c3b744-f598-
           '@type': 'Product',
           name: 'waxlashtan.com Domain',
           description: 'Premium domain name for waxing, lash extensions, and tanning services. A rare, service-exclusive .com domain with SEO built directly into the name.',
+          url: 'https://waxlashtan.com',
+          image: ogImage,
+          brand: {
+            '@type': 'Brand',
+            name: 'waxlashtan.com',
+          },
           offers: {
             '@type': 'Offer',
             price: '82000.00',
@@ -32,6 +38,44 @@ const ogImage = 'https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/e8c3b744-f598-
             availability: 'https://schema.org/InStock',
             url: 'https://waxlashtan.com',
             businessFunction: 'https://schema.org/Sell',
+            shippingDetails: {
+              '@type': 'OfferShippingDetails',
+              shippingRate: {
+                '@type': 'MonetaryAmount',
+                value: '0.00',
+                currency: 'USD',
+              },
+              deliveryTime: {
+                '@type': 'ShippingDeliveryTime',
+                handlingTime: {
+                  '@type': 'QuantitativeValue',
+                  minValue: 0,
+                  maxValue: 1,
+                  unitCode: 'DAY',
+                },
+                transitTime: {
+                  '@type': 'QuantitativeValue',
+                  minValue: 0,
+                  maxValue: 0,
+                  unitCode: 'DAY',
+                },
+              },
+              shippingDestination: {
+                '@type': 'DefinedRegion',
+                addressCountry: 'US',
+              },
+            },
+            hasMerchantReturnPolicy: {
+              '@type': 'MerchantReturnPolicy',
+              returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+              returnMethod: 'https://schema.org/ReturnByMail',
+              returnFees: 'https://schema.org/FreeReturn',
+              refundType: 'https://schema.org/FullRefund',
+              merchantReturnDays: 7,
+              applicableCountry: 'US',
+              returnPolicyDescription:
+                'Domain purchases are covered by escrow protection. Returns accepted within 7 days if transfer has not been fully completed.',
+            },
           },
           review: {
             '@type': 'Review',
