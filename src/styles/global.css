@@ -16,15 +16,15 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-x-3 px-9 py-4 bg-[#B85C38] hover:bg-[#A04E30] text-white font-semibold text-lg rounded-3xl transition-all active:scale-[0.985] shadow-lg shadow-[#B85C38]/20;
+    @apply inline-flex items-center justify-center gap-x-2 sm:gap-x-3 px-6 sm:px-9 py-3.5 sm:py-4 bg-[#B85C38] hover:bg-[#A04E30] text-white font-semibold text-base sm:text-lg rounded-3xl transition-all active:scale-[0.985] shadow-lg shadow-[#B85C38]/20 w-full sm:w-auto;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 border border-[#D4C9B8] hover:bg-white text-[#4A5D4A] font-semibold text-lg rounded-3xl transition-all;
+    @apply inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 border border-[#D4C9B8] hover:bg-white text-[#4A5D4A] font-semibold text-base sm:text-lg rounded-3xl transition-all w-full sm:w-auto;
   }
 
   .section {
-    @apply py-16 md:py-20 px-6;
+    @apply py-12 sm:py-16 md:py-20 px-4 sm:px-6;
   }
 
   .section-title {
