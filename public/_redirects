@@ -1,13 +1,2 @@
-# Canonical URL enforcement — 301 all alternate URLs to https://waxlashtan.com
-# Prevents GSC "Alternate page with proper canonical tag" by not serving duplicates
-
-# www → apex
-https://www.waxlashtan.com https://waxlashtan.com 301
-https://www.waxlashtan.com/ https://waxlashtan.com 301
-https://www.waxlashtan.com/* https://waxlashtan.com/:splat 301
-
-# Trailing-slash root → canonical (no trailing slash)
-https://waxlashtan.com/ https://waxlashtan.com 301
-
-# /index.html duplicate → canonical root
+# Relative redirects only (Workers static assets requirement)
 /index.html / 301
