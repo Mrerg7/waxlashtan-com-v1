@@ -6,19 +6,9 @@ export default {
 
     if (url.hostname === 'www.waxlashtan.com') {
       url.hostname = 'waxlashtan.com';
-      if (url.pathname === '/' && !url.search) {
-        return Response.redirect(CANONICAL_ORIGIN, 301);
-      }
-      return Response.redirect(url.toString(), 301);
-    }
-
-    if (
-      url.hostname === 'waxlashtan.com' &&
-      url.pathname === '/' &&
-      !url.search &&
-      request.url === `${CANONICAL_ORIGIN}/`
-    ) {
-      return Response.redirect(CANONICAL_ORIGIN, 301);
+      const target =
+        url.pathname === '/' && !url.search ? CANONICAL_ORIGIN : url.href.replace(/\/$/, '') || url.href;
+      return Response.redirect(target, 301);
     }
 
     return env.ASSETS.fetch(request);
