@@ -8,8 +8,7 @@ interface Props {
 }
 
 const { title, description = 'waxlashtan.com — The definitive domain for waxing, lashes, and tanning.', ogImage } = Astro.props;
-const pathname = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
-const canonicalURL = new URL(pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href.replace(/\/$/, '') || String(Astro.site);
 ---
 
 <!doctype html>
