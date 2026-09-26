@@ -1,8 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Disallow: /.well-known/
 
 Sitemap: https://waxlashtan.com/sitemap-index.xml
-
-Crawl-delay: 1

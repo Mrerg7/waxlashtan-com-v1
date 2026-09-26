@@ -1,0 +1,12 @@
+/* TEAM */
+Owner: DesertRich Properties
+Contact: sales@desertrich.com
+Location: Phoenix, AZ, USA
+
+/* SITE */
+Last update: 2026/09/25
+Language: English (en)
+Standards: HTML5, CSS3, WAI-ARIA, Schema.org JSON-LD
+Components: Astro, Tailwind CSS
+Hosting: Cloudflare Workers (static assets)
+Doctype: HTML5

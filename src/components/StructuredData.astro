@@ -1,9 +1,98 @@
 ---
-interface Props {
-  schema: Record<string, any>;
-}
+import { DESCRIPTION, DOMAIN, BASE_URL, CONTACT_EMAIL, OG_IMAGE, PRICE_USD, TITLE, faqs } from '../data/site';
 
-const { schema } = Astro.props;
+const canonical = 'https://waxlashtan.com';
+const organizationId = `${BASE_URL}/#organization`;
+const websiteId = `${BASE_URL}/#website`;
+const productId = `${BASE_URL}/#product`;
+const webpageId = `${canonical}#webpage`;
+
+const graph = [
+  {
+    '@type': 'Organization',
+    '@id': organizationId,
+    name: 'DesertRich Properties',
+    url: `${BASE_URL}/`,
+    email: `mailto:${CONTACT_EMAIL}`,
+    description: `Owner and seller of the premium domain ${DOMAIN}, offered for direct acquisition.`,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'sales',
+      email: CONTACT_EMAIL,
+      availableLanguage: 'English',
+    },
+  },
+  {
+    '@type': 'WebSite',
+    '@id': websiteId,
+    url: `${BASE_URL}/`,
+    name: DOMAIN,
+    description: DESCRIPTION,
+    inLanguage: 'en-US',
+    publisher: { '@id': organizationId },
+  },
+  {
+    '@type': 'WebPage',
+    '@id': webpageId,
+    url: canonical,
+    name: TITLE,
+    description: DESCRIPTION,
+    inLanguage: 'en-US',
+    isPartOf: { '@id': websiteId },
+    about: { '@id': productId },
+    primaryImageOfPage: OG_IMAGE,
+    publisher: { '@id': organizationId },
+    breadcrumb: { '@id': `${canonical}#breadcrumb` },
+  },
+  {
+    '@type': 'BreadcrumbList',
+    '@id': `${canonical}#breadcrumb`,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: `${DOMAIN} for sale`, item: canonical },
+    ],
+  },
+  {
+    '@type': 'Product',
+    '@id': productId,
+    name: `${DOMAIN} domain name`,
+    description:
+      'Premium exact-match .com domain name for the waxing, lash extension and tanning market. Sold as a domain asset with clear title and escrow-protected transfer.',
+    url: canonical,
+    image: OG_IMAGE,
+    category: 'Domain Name',
+    brand: { '@type': 'Brand', name: DOMAIN },
+    offers: {
+      '@type': 'Offer',
+      '@id': `${productId}-offer`,
+      url: canonical,
+      price: PRICE_USD.toFixed(2),
+      priceCurrency: 'USD',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: PRICE_USD,
+        priceCurrency: 'USD',
+        valueAddedTaxIncluded: false,
+      },
+      availability: 'https://schema.org/InStock',
+      itemCondition: 'https://schema.org/NewCondition',
+      businessFunction: 'https://schema.org/Sell',
+      seller: { '@id': organizationId },
+      validFrom: '2026-06-25',
+    },
+  },
+  {
+    '@type': 'FAQPage',
+    '@id': `${canonical}#faq`,
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  },
+];
+
+const schema = { '@context': 'https://schema.org', '@graph': graph };
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(schema)} />

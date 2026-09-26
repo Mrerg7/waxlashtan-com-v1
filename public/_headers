@@ -1,7 +1,28 @@
+# Security and referrer hardening
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; img-src 'self' data: https://imagedelivery.net; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'self'
+
 # Prevent indexing of /index.html duplicate URLs
-# Cloudflare Pages serves both / and /index.html for the same content
-# X-Robots-Tag: noindex tells Google not to index the /index.html variant
 /index.html
   X-Robots-Tag: noindex
 /*/index.html
   X-Robots-Tag: noindex
+
+# Hashed build assets are immutable
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images
+/*.png
+  Cache-Control: public, max-age=86400
+/*.webp
+  Cache-Control: public, max-age=86400
+/*.svg
+  Cache-Control: public, max-age=86400
+/*.ico
+  Cache-Control: public, max-age=86400

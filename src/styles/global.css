@@ -2,9 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url('/fonts/inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url('/fonts/inter-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
 
   body {
@@ -12,26 +31,48 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid #B85C38;
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-x-3 px-9 py-4 bg-[#B85C38] hover:bg-[#A04E30] text-white font-semibold text-lg rounded-3xl transition-all active:scale-[0.985] shadow-lg shadow-[#B85C38]/20;
+    @apply inline-flex items-center justify-center gap-x-3 px-6 sm:px-9 py-3.5 sm:py-4 w-full sm:w-auto bg-[#B85C38] hover:bg-[#A04E30] text-white font-semibold text-base sm:text-lg rounded-3xl transition-all active:scale-[0.985] shadow-lg shadow-[#B85C38]/20;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 border border-[#D4C9B8] hover:bg-white text-[#4A5D4A] font-semibold text-lg rounded-3xl transition-all;
+    @apply inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 w-full sm:w-auto border border-[#D4C9B8] hover:bg-white text-[#4A5D4A] font-semibold text-base sm:text-lg rounded-3xl transition-all;
   }
 
   .section {
-    @apply py-16 md:py-20 px-6;
+    @apply py-12 sm:py-16 md:py-20 px-4 sm:px-6;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-[#2D2D2D] tracking-tight;
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-[#2D2D2D] tracking-tight;
   }
 
   .modern-pill {
-    @apply inline-block bg-[#B85C38]/10 text-[#B85C38] font-semibold text-xs px-3 py-1 rounded-full tracking-wide;
+    @apply inline-block bg-[#B85C38]/10 text-[#8B3D1F] font-semibold text-xs px-3 py-1 rounded-full tracking-wide;
   }
 }

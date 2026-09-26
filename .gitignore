@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # original reference HTML (replaced by Astro build)
 waxlashtan-com-premium-landing.html
+
+# wrangler local state
+.wrangler/
